@@ -3,6 +3,8 @@ import numpy as np
 
 #standard data : mean = 0, standard deviation = 1
 
+# x' = (x - mean(x)) / standard deviation(x)
+
 arr = np.array([[1, 100, 2390], [2, 234, 5432], [0, 323, 5555]])
 
 std = sklearn.preprocessing.scale(arr)

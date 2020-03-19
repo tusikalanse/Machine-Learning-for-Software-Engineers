@@ -6,18 +6,18 @@ import sklearn.preprocessing
 
 arr = np.array([[1, 100, 2390], [2, 234, 5432], [0, 323, 5555]]) #feature_range=(x, y)
 
-scaler = sklearn.preprocessing.MinMaxScaler()
-print(scaler.fit_transform(arr))
+default_scaler = sklearn.preprocessing.MinMaxScaler()
+print(default_scaler.fit_transform(arr))
 # [[0.5        0.         0.        ]
 #  [1.         0.60089686 0.96113744]
 #  [0.         1.         1.        ]]
 
-scaler = sklearn.preprocessing.MinMaxScaler()
-scaler.fit(arr)
-#print(scaler.transform(arr)) the same as line 10
+default_scaler = sklearn.preprocessing.MinMaxScaler()
+default_scaler.fit(arr)
+#print(default_scaler.transform(arr)) the same as line 10
 arr2 = np.array([[1, 100, 2390], [2, 100, 1999], [1, 223, 5555]])
 
-print(scaler.transform(arr2))
+print(default_scaler.transform(arr2))
 # [[ 0.5         0.          0.        ]
 #  [ 1.          0.         -0.1235387 ]
 #  [ 0.5         0.55156951  1.        ]]
